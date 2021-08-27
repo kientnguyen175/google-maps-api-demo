@@ -1,2 +1,2 @@
 # Address Filling Helper
-Suggest and fill in address by google maps api
+Suggest and fill in address by Google Maps Api
