@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- google maps -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet"/>
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- js  -->
+    <script src="controller.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <form method="post">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label>
+                        Find Address
+                    </label>
+                    <input id="shipAddress"
+                        class="form-control" 
+                        type="text" 
+                        required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>
+                        1. Country / Region<span class="required">*</span>
+                    </label>
+                    <select class="form-control" id="country">
+                        <option selected value="US">US</option>
+                        <option value="VN">VN</option>
+                        <option value="UK">UK</option>
+                        <option value="JP">JP</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>
+                        2. State / Province
+                    </label>
+                    <input id="state" 
+                        class="form-control" 
+                        type="text"
+                        name="state">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>
+                        3. City / Suburd<span class="required">*</span>
+                    </label>
+                    <input id="city" 
+                        class="form-control" 
+                        type="text" 
+                        name="city"
+                        required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>
+                        4. Street Address<span class="required">*</span>
+                    </label>
+                    <input id="streetAddress" 
+                        class="form-control" 
+                        type="text" 
+                        name="streetAddress"
+                        required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>
+                        5. Zip / Postal Code<span class="required">*</span>
+                    </label>
+                    <input id="zipCode" 
+                        class="form-control" 
+                        type="text" 
+                        name="zipCode"
+                        required>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8&callback=initAutocomplete&libraries=places&v=weekly" async></script>
+</body>
+</html>
